@@ -446,9 +446,9 @@ img {
         display: none;
     }
     .nav_menu {
-        width: 9rem;
+        width: 10rem;
         position: fixed;
-        top: 5rem;
+        top: 4.35rem;
         right: 5%;
         height: fit-content;
         flex-direction: column;
@@ -579,7 +579,9 @@ img {
     .courses_container {
         grid-template-columns: 1fr;
     }
-
+    .testimonial {
+        margin: 0 10px;
+    }
     .testimonial_body {
         padding: 1.2rem;
     }

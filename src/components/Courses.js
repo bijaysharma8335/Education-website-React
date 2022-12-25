@@ -4,7 +4,7 @@ import { courses } from "./../constants/courses";
 
 const Courses = () => {
     return (
-        <div className="courses mt-5">
+        <div className="courses ">
             <h2 className="text-white mt-5"> Our Popular Courses</h2>
             <div className="container courses_container">
                 {courses.map((course, i) => (
