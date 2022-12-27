@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div className="contact">
             <div className="container contact_container">
-                <aside className="contact_aside">
+                <div className="contact_aside">
                     <div className="aside_image">
                         <img src={image} alt="" />
                     </div>
@@ -51,7 +51,7 @@ const Contact = () => {
                             </Link>
                         </li>
                     </ul>
-                </aside>
+                </div>
 
                 <form
                     action="https://formspree.io/f/xjvzqnow"
@@ -85,9 +85,14 @@ const Contact = () => {
                         placeholder="Message"
                         required
                     ></textarea>
-                    <button type="submit" className="button button-primary">
-                        Send Message
-                    </button>
+                    <div style={{ textAlign: "center" }}>
+                        <button
+                            type="submit"
+                            className="button button-primary "
+                        >
+                            Send Message
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -7,19 +7,23 @@ const Header = () => {
         const menuBtn = document.querySelector("#open-menu-btn");
         const closedBtn = document.querySelector("#close-menu-btn");
 
-        menuBtn.addEventListener("click", () => {
+        menuBtn.addEventListener("click", (e) => {
+            e.stopPropagation()
             menu.style.display = "flex";
             closedBtn.style.display = "inline-block";
             menuBtn.style.display = "none";
         });
         //close nav menu
-        const closeNav = () => {
+       
+        const closeNav = (e) => {
+            e.stopPropagation()
             menu.style.display = "none";
             closedBtn.style.display = "none";
             menuBtn.style.display = "inline-block";
         };
 
         closedBtn?.addEventListener("click", closeNav);
+        document.body.addEventListener("click", closeNav);
     }, []);
 
     return (
