@@ -92,6 +92,11 @@ textarea {
     cursor: pointer;
 }
 
+@media (max-width: 10024px) {
+    #close-menu-btn {
+        display: inline-block;
+    }
+}
 @media (max-width: 992px) {
     .contact_container {
         flex-direction: column;

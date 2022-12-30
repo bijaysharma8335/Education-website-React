@@ -453,7 +453,6 @@ img {
         height: fit-content;
         flex-direction: column;
         gap: 0;
-        display: none;
     }
     .nav_menu li {
         width: 100%;

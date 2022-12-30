@@ -1,30 +1,68 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-    useEffect(() => {
-        const menu = document.querySelector(".nav_menu");
-        const menuBtn = document.querySelector("#open-menu-btn");
-        const closedBtn = document.querySelector("#close-menu-btn");
+    const menuBtnRef = useRef();
+    const closeBtnRef = useRef();
 
-        menuBtn.addEventListener("click", (e) => {
-            e.stopPropagation()
-            menu.style.display = "flex";
+    const [hide, setHide] = useState(true);
+
+    const menuBtn = document.querySelector("#open-menu-btn");
+    const closedBtn = document.querySelector("#close-menu-btn");
+
+    function handleResize() {
+        if (window.innerWidth >= 1024) {
+            setHide(true);
+            menuBtnRef.current.style.display = "none";
+            closeBtnRef.current.style.display = "none";
+            return true;
+        } else if (
+            window.innerWidth < 1024 &&
+            closeBtnRef.current.style.display === "none"
+        ) {
+            setHide(false);
+            for (let i = 0; i <= 5; i++) {
+                menuBtnRef.current.style.display = "inline-block";
+            }
+            return false;
+        } else if (
+            window.innerWidth < 1024 &&
+            menuBtnRef.current.style.display === "none"
+        ) {
+            setHide(false);
+            closeBtnRef.current.style.display = "inline-block";
+            return false;
+        }
+    }
+    useEffect(() => {
+        if (window.innerWidth < 1024) {
+            setHide(false);
+        } else if (window.innerWidth > 1024) {
+            closeBtnRef.current.style.display = "none";
+            menuBtnRef.current.style.display = "none";
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+
+        const closeNav = (e) => {
+            closedBtn.style.display = "none";
+            e.stopPropagation();
+            setHide(false);
+
+            menuBtn.style.display = "inline-block";
+        };
+        const showNav = (e) => {
+            e.stopPropagation();
+            setHide(true);
             closedBtn.style.display = "inline-block";
             menuBtn.style.display = "none";
-        });
-        //close nav menu
-       
-        const closeNav = (e) => {
-            e.stopPropagation()
-            menu.style.display = "none";
-            closedBtn.style.display = "none";
-            menuBtn.style.display = "inline-block";
         };
 
         closedBtn?.addEventListener("click", closeNav);
-        document.body.addEventListener("click", closeNav);
-    }, []);
+        menuBtn?.addEventListener("click", showNav);
+    }, [closedBtn, menuBtn]);
 
     return (
         <div className="nav">
@@ -33,33 +71,51 @@ const Header = () => {
                     <h4>EDUCATION</h4>
                 </Link>
 
-                <ul className="nav_menu">
-                    <li>
-                        <Link to="/" className=" text-decoration-none">
-                            <h4>Home</h4>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/about" className="text-decoration-none">
-                            <h4>About</h4>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/courses" className="text-decoration-none">
-                            <h4>Courses</h4>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/contact" className=" text-decoration-none">
-                            <h4>Contact</h4>
-                        </Link>
-                    </li>
-                </ul>
+                {hide && (
+                    <ul className="nav_menu" onClick={handleResize}>
+                        <li>
+                            <Link to="/" className=" text-decoration-none">
+                                <h4>Home</h4>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/about" className="text-decoration-none">
+                                <h4>About</h4>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/courses"
+                                className="text-decoration-none"
+                            >
+                                <h4>Courses</h4>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="/contact"
+                                className=" text-decoration-none"
+                            >
+                                <h4>Contact</h4>
+                            </Link>
+                        </li>
+                    </ul>
+                )}
 
-                <button id="open-menu-btn">
+                <button
+                    id="open-menu-btn"
+                    ref={menuBtnRef}
+                    style={
+                        hide ? { display: "none" } : { display: "inline-block" }
+                    }
+                >
                     <i className="uil uil-bars"></i>
                 </button>
-                <button id="close-menu-btn">
+                <button
+                    id="close-menu-btn"
+                    ref={closeBtnRef}
+                    style={hide ? { display: "block" } : { display: "none" }}
+                >
                     <i className="uil uil-multiply"></i>
                 </button>
             </div>

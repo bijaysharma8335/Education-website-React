@@ -15,7 +15,6 @@ const App = () => {
             .classList.toggle("window-scroll", window.scrollY > 100);
     });
 
-  
     return (
         <>
             <BrowserRouter>
