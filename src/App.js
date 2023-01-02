@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Courses from "./components/Courses";
 import About from "./components/About";
 import ScrollToTop from "./components/ScrollToTop";
+import CoursesPreview from './components/CoursesPreview';
 const App = () => {
     window.addEventListener("scroll", () => {
         document
@@ -25,6 +26,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/courses" element={<Courses />} />
+                    <Route path="/:id/courses" element={<CoursesPreview />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>

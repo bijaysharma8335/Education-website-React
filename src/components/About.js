@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./About.css";
 import { teams } from "./../constants/teams";
+
 const About = () => {
     return (
         <>
@@ -15,7 +16,7 @@ const About = () => {
                     </div>
                     <div className="about_achievements-right ">
                         <h1 className="my-2">Achievements</h1>
-                        <p >
+                        <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Accusantium mollitia nihil quibusdam maiores
                             vero ullam eius laudantium, in voluptas nobis nisi
@@ -74,7 +75,7 @@ const About = () => {
                                     <i className="uil uil-instagram"></i>
                                 </Link>
                                 <Link
-                                    to="https://www.twitter.com"
+                                    to={{ pathname: "www.twitter.com" }}
                                     target="_blank"
                                 >
                                     <i className="uil uil-twitter-alt"></i>

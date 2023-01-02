@@ -29,9 +29,9 @@ body {
     --transition: all 400ms ease;
     font-family: "Montserrat", sans-serif;
     line-height: 1.7;
-    color: var(--color-white);
-    background: rgb(26, 24, 24) !important;
-    background-image: url("./assets/images//bg-texture.png");
+    color: black !important;
+    background: rgb(255, 255, 255) !important;
+    /* background-image: url("./assets/images//bg-texture.png"); */
 }
 .container {
     width: var(--container-width-lg);
@@ -73,11 +73,11 @@ img {
 }
 .link {
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
 }
 .link:hover {
     text-decoration: underline;
-    color: white;
+    color: var(--color-white);
 }
 .button {
     display: inline-block;
@@ -97,6 +97,10 @@ img {
     background: var(--color-danger);
     color: var(--color-white);
 }
+.button-primary:hover {
+    color: var(--color-white);
+    background-color: rgb(26, 24, 24);
+}
 /* navbar */
 
 .nav {
@@ -106,17 +110,19 @@ img {
     position: fixed;
     top: 0;
     z-index: 11;
+    color: var(--color-white);
+    background-color: var(--color-black);
 }
 /* change navbar color on scroll using js */
 .window-scroll {
-    background: var(--color-primary);
+    background: var(--color-black);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .nav button {
     display: none;
 }
 .nav_container {
-    height: 100%;
+    height: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,7 +148,7 @@ img {
     overflow: hidden;
     height: 70vh;
     margin-bottom: 5rem;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 .header_container {
     padding: 10px;
@@ -151,6 +157,7 @@ img {
     align-items: center;
     gap: 5rem;
     height: 100%;
+    color: var(--color-black);
 }
 .header_left p {
     margin: 1rem 0 2.4rem;
@@ -158,11 +165,12 @@ img {
 
 /* categories */
 .categories {
-    background: var(--color-bg);
-    height: 32rem;
+    /* background: rgb(232, 248, 248); */
+    color: var(--color-black);
     padding: 2rem;
 }
 .categories h1 {
+    color: var(--color-black);
     line-height: 1;
     margin-bottom: 3rem;
 }
@@ -175,20 +183,22 @@ img {
     margin-right: 4rem;
 }
 .categories_left p {
-    color: var(--color-white);
+    color: var(--color-black);
     margin: 1rem 0 3rem;
 }
 .categories_right {
-    color: var(--color-white);
+    color: var(--color-black);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
 }
 .category {
-    background: var(--color-bg2);
+    background: var(--color-white);
     padding: 2rem;
     border-radius: 3rem;
     transition: var(--transition);
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 .category:hover {
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
@@ -209,6 +219,7 @@ img {
     background: var(--color-success);
 }
 .category_icon {
+    color: var(--color-white);
     background: var(--color-primary);
     padding: 0.7rem;
     border-radius: 0.9rem;
@@ -229,18 +240,22 @@ img {
     gap: 3rem;
 }
 .course {
-    background-color: var(--color-bg1);
+    background-color: rgb(241, 241, 235);
     text-align: center;
     border: 1px solid transparent;
     transform: var(--transition);
-    color: var(--color-white);
+    color: var(--color-black);
+    box-shadow: 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
 }
 .courses > h2 {
     margin: 2rem 0;
     text-align: center;
 }
 .course:hover {
-    background-color: transparent;
+    background-color: var(--color-white);
+    color: rgb(31, 30, 30);
     border: 1px solid var(--color-white);
 }
 .course_info {
@@ -301,13 +316,13 @@ img {
 
 /* testimonials */
 .testimonials_container {
-    color: var(--color-white);
+    /* color: var(--color-white); */
     overflow-x: hidden;
     position: relative;
     margin-bottom: 5rem;
 }
 .testimonial_title {
-    color: var(--color-white);
+    color: var(--color-black);
     text-align: center;
     margin: 2rem;
 }
@@ -321,13 +336,14 @@ img {
     overflow: hidden;
     margin: 0 auto 1rem;
     object-fit: cover;
-    border: 1rem solid var(--color-bg1);
+    border: 1px solidblack;
 }
 .testimonial_info {
     text-align: center;
 }
 .testimonial_body {
-    background: var(--color-primary);
+    background: black;
+    color: var(--color-white);
     padding: 2rem;
     margin-top: 3rem;
     position: relative;
@@ -338,9 +354,9 @@ img {
     background: linear-gradient(
         135deg,
         transparent,
-        var(--color-primary),
-        var(--color-primary),
-        var(--color-primary)
+        var(--color-black),
+        var(--color-black),
+        var(--color-black)
     );
     width: 3rem;
     height: 3rem;
@@ -383,21 +399,28 @@ img {
     font-size: 1.2rem;
     margin-top: 2rem;
 }
-.uil-facebook-f:hover {
+.bi-facebook {
+    margin-top: -4px;
+}
+.bi-facebook:hover {
     background-color: blue;
+    border-radius: 70%;
     color: var(--color-white);
 }
 .uil-instagram-alt:hover {
     color: rgb(255, 17, 0);
+    border-radius: 70%;
     background-color: white;
 }
 .uil-twitter:hover {
     color: #00acee;
+    border-radius: 70%;
     background-color: var(--color-white);
 }
 
 .uil-linkedin-alt:hover {
     background-color: var(--color-white);
+    border-radius: 70%;
     color: #0a66c2;
 }
 
@@ -481,7 +504,7 @@ img {
         }
     }
     .nav_menu li a {
-        background: var(--color-primary);
+        background: var(--color-black);
         box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
         width: 100%;
         height: 100%;

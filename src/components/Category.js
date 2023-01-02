@@ -7,7 +7,7 @@ const Category = () => {
             <div className="categories">
                 <div className="categories_container">
                     <div className="categories_left">
-                        <h1 className="text-white">Categories</h1>
+                        <h1>Categories</h1>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Officiis enim accusantium eius vero, non
@@ -15,7 +15,10 @@ const Category = () => {
                             maxime officia quas excepturi nostrum ratione eos
                             obcaecati sunt eaque?
                         </p>
-                        <Link to="#" className="button text-decoration-none">
+                        <Link
+                            to="#"
+                            className="button button-primary text-decoration-none"
+                        >
                             Learn more
                         </Link>
                     </div>
@@ -24,7 +27,7 @@ const Category = () => {
                             <span className="category_icon">
                                 <i className="uil uil-bitcoin-circle"></i>
                             </span>
-                            <h5>Blockchain</h5>
+                            <h5>Management</h5>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit.
@@ -44,7 +47,7 @@ const Category = () => {
                             <span className="category_icon">
                                 <i className="uil uil-bitcoin-circle"></i>
                             </span>
-                            <h5>Blockchain</h5>
+                            <h5>Web Development</h5>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit.
@@ -54,7 +57,7 @@ const Category = () => {
                             <span className="category_icon">
                                 <i className="uil uil-bitcoin-circle"></i>
                             </span>
-                            <h5>Blockchain</h5>
+                            <h5>Mobile Application</h5>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit.
@@ -64,7 +67,7 @@ const Category = () => {
                             <span className="category_icon">
                                 <i className="uil uil-bitcoin-circle"></i>
                             </span>
-                            <h5>Blockchain</h5>
+                            <h5>Graphic Design</h5>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit.
