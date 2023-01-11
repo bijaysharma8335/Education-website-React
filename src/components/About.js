@@ -8,7 +8,7 @@ const About = () => {
         <>
             <div className="about_achievements">
                 <div className="container about_achievements-container">
-                    <div className="about_achievements-left">
+                    <div className="about_achievements-left mt-5">
                         <img
                             src="https://cdn.pixabay.com/photo/2016/07/13/12/14/inspiration-1514296_960_720.jpg"
                             alt=""

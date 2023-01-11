@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;500&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -143,7 +144,7 @@ img {
 }
 
 .header {
-    position: relative;
+    position: absolute;
     top: 5rem;
     overflow: hidden;
     height: 70vh;
@@ -161,8 +162,11 @@ img {
 }
 .header_left p {
     margin: 1rem 0 2.4rem;
+    color: var(--color-white);
 }
-
+.header_left h1 {
+    color: var(--color-white);
+}
 /* categories */
 .categories {
     /* background: rgb(232, 248, 248); */
@@ -520,6 +524,7 @@ img {
     /* header */
 
     .header {
+        position: relative;
         height: 52vh;
         margin-bottom: 4rem;
     }
@@ -574,15 +579,20 @@ img {
 
     /* header */
     .header {
-        height: 100vh;
+        position: relative;
+        /* height: 90vh; */
     }
     .header_container {
         grid-template-columns: 1fr;
         text-align: center;
         margin-top: 0;
     }
+    .header_left h1 {
+        color: var(--color-black);
+    }
     .header_left p {
         margin-bottom: 1.3rem;
+        color: var(--color-black);
     }
     .categories_right {
         grid-template-columns: 1fr 1fr;
@@ -598,6 +608,9 @@ img {
     }
 
     /* course*/
+    .courses {
+        margin: 5rem 0;
+    }
     .courses_container {
         grid-template-columns: 1fr;
     }

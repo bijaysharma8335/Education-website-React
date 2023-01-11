@@ -9,9 +9,9 @@ const CoursesPreview = () => {
         <div className="container mt-5">
             <div className="row mt-5">
                 <div className="col-md-12 ">
-                    <h4 className="my-5 text-center">{course.title}</h4>
-                    <img src={course.image} alt="" />
-                    <p className="p-2 text-secondary fw-light">
+                    <h1 className="my-5 text-center fw-bold">{course.title}</h1>
+                    <img src={course.image} alt="" height={300} />
+                    <p className="p-2 text-dark fw-light my-4">
                         {course.description}
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Itaque nobis amet, eos dolor repudiandae est accusantium
