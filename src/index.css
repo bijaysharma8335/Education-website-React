@@ -532,6 +532,9 @@ img {
         gap: 0;
         padding-bottom: 4rem;
     }
+    .header_left h1 {
+        color: var(--color-black);
+    }
     /* header */
     .categories {
         height: auto;
@@ -543,7 +546,9 @@ img {
     .categories_left {
         margin-right: 0;
     }
-
+    .categories_left .category-btn {
+        margin: 0px 70px !important;
+    }
     /* courses */
     .courses {
         margin-top: 0;
@@ -602,6 +607,13 @@ img {
         padding: 1rem;
         border-radius: 1rem;
     }
+    .categories_left > h1 {
+        text-align: center;
+    }
+    .categories_left .category-btn {
+        margin: 0px 70px !important;
+    }
+
     .category_icon {
         margin-top: 4px;
         display: inline-block;

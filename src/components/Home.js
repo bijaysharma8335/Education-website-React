@@ -47,7 +47,6 @@ const Home = () => {
                 infinite
                 animationType="fadeout"
                 disableDotsControls
-                // responsive={responsive}
                 controlsStrategy="alternate"
                 autoPlayStrategy="none"
                 autoPlayInterval={1000}
@@ -55,18 +54,8 @@ const Home = () => {
                 touchTracking={false}
                 disableButtonsControls
                 className="mt-5"
-                // responsiveness={
-                //     {
-                //         0: {
-                //             items: 1,
-                //         },
-                //         1024: {
-                //             items: 3
-                //         }
-                //       }
-                // }
             />
-            {/* <Container> */}
+            <Container>
             <div className="header">
                 <div className="header_container">
                     <div className="header_left">
@@ -83,13 +72,13 @@ const Home = () => {
                         </Link>
                     </div>
                     {/* <div className="header_right-image">
-                            <div className="header_right">
-                                <img
-                                    src="https://img.freepik.com/premium-vector/education-technology-page-smartphone-page_316839-2330.jpg?w=2000"
-                                    alt=""
-                                />
-                            </div>
-                        </div> */}
+                        <div className="header_right">
+                            <img
+                                src="https://img.freepik.com/premium-vector/education-technology-page-smartphone-page_316839-2330.jpg?w=2000"
+                                alt=""
+                            />
+                        </div>
+                    </div> */}
                 </div>
             </div>
             <Category />
@@ -98,11 +87,7 @@ const Home = () => {
                 {courses.map((course, i) => {
                     if (i < 3) {
                         return (
-                            <div
-                                className="course"
-                                key={i}
-                                // onClick={() => navigate("/courses")}
-                            >
+                            <div className="course" key={i}>
                                 <img
                                     fluid={true}
                                     src={course.image}
@@ -110,7 +95,6 @@ const Home = () => {
                                     height={200}
                                     style={{ objectFit: "contain !important" }}
                                 />
-
 
                                 <div className="course_info">
                                     <h4>{course.title}</h4>
@@ -130,7 +114,7 @@ const Home = () => {
             </div>
             <Faq />
             <Testimonials />
-            {/* </Container> */}
+            </Container>
         </>
     );
 };

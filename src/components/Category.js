@@ -17,7 +17,7 @@ const Category = () => {
                         </p>
                         <Link
                             to="#"
-                            className="button button-primary text-decoration-none"
+                            className="button button-primary text-decoration-none category-btn"
                         >
                             Learn more
                         </Link>
