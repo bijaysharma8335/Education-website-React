@@ -68,8 +68,8 @@ const Footer = () => {
                 <div className="footer_4">
                     <h4>Contact Us</h4>
                     <div className="permalinks">
-                        <p>+01 234 567 8910</p>
-                        <p>xyz@gmail.com</p>
+                        <p>+91-7619423657</p>
+                        <p>bijay@gmail.com</p>
                     </div>
                     <ul className="footer_socials">
                         <li>

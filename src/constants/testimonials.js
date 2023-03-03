@@ -28,11 +28,11 @@ export const testimonials = [
     },
     {
         id: 4,
-        image: "https://images.unsplash.com/photo-1591969851586-adbbd4accf81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9tYW50aWMlMjBjb3VwbGV8ZW58MHx8MHx8&w=1000&q=80",
+        image: "https://www.rri.res.in/sites/default/files/2022-09/Abhisek%20Tamang.jpg",
        
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis officiis ullam deserunt numquam. Explicabo nobis eaque, suscipit hic iure culpa quaerat quas. Nisi accusamus mollitia laboriosam possimus illo tempora.",
-        name: "Rose",
+        name: "Stefan",
         designation: "Backend Developer",
     },
     {
@@ -41,7 +41,7 @@ export const testimonials = [
        
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis officiis ullam deserunt numquam. Explicabo nobis eaque, suscipit hic iure culpa quaerat quas. Nisi accusamus mollitia laboriosam possimus illo tempora.",
-        name: "Stefan",
+        name: "Jessika",
         designation: "BlockChain Developer",
     },
 ];

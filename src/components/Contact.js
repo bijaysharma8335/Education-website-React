@@ -21,12 +21,12 @@ const Contact = () => {
                     <ul className="contact_details">
                         <li>
                             <i className="uil uil-phone-times text-dark"></i>
-                            <h6 className="text-secondary">+91761923668</h6>
+                            <h6 className="text-secondary">+91761923657</h6>
                         </li>
                         <li>
                             <i className="uil uil-envelope"></i>
                             <h6 className="text-secondary">
-                                support@gmail.com
+                                xyz@gmail.com
                             </h6>
                         </li>
                         <li>

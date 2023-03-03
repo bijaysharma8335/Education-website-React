@@ -151,3 +151,37 @@ textarea:hover {
         width: 98%;
     }
 }
+@media (max-width: 280px) {
+    h5 {
+        font-size: 0.9rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    h6 {
+        font-size: 0.7rem !important;
+    }
+    .contact_container {
+        width: 98%;
+    }
+
+    .contact_aside {
+        width: 100%;
+    }.contact_form {
+        margin-right: 0 !important;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-right: 1rem;
+        padding: 0.5rem;
+    }
+    .form_name {
+        display: flex;
+        gap: 0.5rem;
+    }input,
+    textarea {
+        width: 100%;
+        padding: 0.5rem;
+        background: rgb(237, 232, 232);
+    }
+}

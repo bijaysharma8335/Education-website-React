@@ -162,3 +162,25 @@
         margin: 0 auto;
     }
 }
+@media screen and (max-width: 280px) {
+    .achievements_cards {
+        grid-template-columns:  1fr;
+        gap: 0.7rem;
+    }
+    .team_container {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+    }
+
+ 
+
+    .team_member p {
+        margin-bottom: 1.5rem;
+    }
+  
+    .about_achievements-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+  
+}

@@ -644,3 +644,24 @@ img {
         justify-content: center;
     }
 }
+@media (max-width: 280px) {
+    /* h5 {
+        font-size: 0.9rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    h6 {
+        font-size: 0.7rem !important;
+    } */
+    .categories {
+        padding: 0.5rem !important;
+    }
+    .categories_right {
+        grid-template-columns: 1fr;
+        /* gap: 0.7rem; */
+    }
+    .courses_container {
+        --bs-gutter-x: 0.5rem !important;
+    }
+}
