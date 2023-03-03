@@ -70,7 +70,7 @@ a {
 img {
     width: 100%;
     display: block;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 .link {
     text-decoration: none;
@@ -444,7 +444,7 @@ img {
 }
 
 /* Media query for tablet */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .container {
         width: var(--container-width-md);
     }
