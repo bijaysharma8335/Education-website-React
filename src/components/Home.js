@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { Image } from "react-bootstrap";
 import Category from "./Category";
 
 import Faq from "./Faq";

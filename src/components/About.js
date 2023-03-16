@@ -72,13 +72,13 @@ const About = () => {
                                     to="https://www.instagram.com"
                                     target="_blank"
                                 >
-                                    <i className="uil uil-instagram"></i>
+                                    <i className="uil uil-instagram-alt"></i>
                                 </Link>
                                 <Link
                                     to={{ pathname: "www.twitter.com" }}
                                     target="_blank"
                                 >
-                                    <i className="uil uil-twitter-alt"></i>
+                                    <i className="uil uil-twitter"></i>
                                 </Link>
                                 <Link
                                     to="https://www.linkedin.com"
@@ -90,7 +90,7 @@ const About = () => {
                                     to="https://www.facebook.com"
                                     target="_blank"
                                 >
-                                    <i className="uil uil-facebook"></i>
+                                    <i className="uil uil-facebook bi-facebook"></i>
                                 </Link>
                             </div>
                         </div>
